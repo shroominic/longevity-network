@@ -404,18 +404,14 @@ const Index = () => {
       </section>
 
       {/* Blood Testing Section */}
-      <section id="blood-testing" className="py-24 bg-gradient-to-b from-primary/5 to-background">
+      <section id="blood-testing" className="py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              <TestTube className="w-3 h-3 mr-1" />
-              Partner Lab Access
-            </Badge>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-2">
               Build Your <span className="text-primary">Blood Panel</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Start with our comprehensive base panel at just $19, then customize with add-ons tailored to your health goals.
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Start at $19, customize with add-ons for your health goals.
             </p>
           </div>
           
