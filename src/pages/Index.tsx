@@ -304,7 +304,7 @@ const Index = () => {
               <CardContent className="text-center pt-4">
                 <div className="mb-8">
                   <span className="text-6xl font-bold text-primary">$50</span>
-                  <span className="text-muted-foreground text-xl">/month</span>
+                  <p className="text-sm text-muted-foreground mt-2">One-time payment (monthly subscription coming soon)</p>
                 </div>
                 
                 <ul className="text-left space-y-4 mb-8">
@@ -331,12 +331,15 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="w-full text-lg py-6 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:shadow-xl"
+                  asChild
                 >
-                  Join LongevityNetwork
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <a href="https://buy.stripe.com/5kQ00j9Sw4a19Mk281" target="_blank" rel="noopener noreferrer">
+                    Join LongevityNetwork
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
                 </Button>
                 <p className="text-sm text-muted-foreground text-center">
-                  Cancel anytime. No long-term commitment required.
+                  Secure payment via Stripe
                 </p>
               </CardFooter>
             </Card>
@@ -438,10 +441,12 @@ const Index = () => {
             <Button 
               size="lg"
               className="text-lg px-8 py-6 rounded-full bg-white text-emerald-700 hover:bg-emerald-50 shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => scrollToSection('membership')}
+              asChild
             >
-              Join for $50/month
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <a href="https://buy.stripe.com/5kQ00j9Sw4a19Mk281" target="_blank" rel="noopener noreferrer">
+                Join for $50
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             <Button 
               variant="outline"
