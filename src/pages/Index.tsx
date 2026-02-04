@@ -2,6 +2,7 @@ import { useSeoMeta } from '@unhead/react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { BloodTestBuilder } from '@/components/BloodTestBuilder';
 import {
   Activity,
   Users,
@@ -14,7 +15,6 @@ import {
   ChevronDown,
   TestTube,
   Droplets,
-  Dna,
   Sun,
   Pill,
   LineChart,
@@ -72,7 +72,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6 px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 mr-2" />
-              NetworkSchool Community
+              NetworkSchool L2
             </Badge>
             
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-balance">
@@ -412,167 +412,14 @@ const Index = () => {
               Partner Lab Access
             </Badge>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-              Comprehensive <span className="text-primary">Blood Testing</span>
+              Build Your <span className="text-primary">Blood Panel</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Exclusive member pricing on longevity-focused blood panels. Know your biomarkers, optimize your health.
+              Start with our comprehensive base panel at just $19, then customize with add-ons tailored to your health goals.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Standard Package */}
-            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <Badge variant="secondary" className="w-fit mb-2">Foundation</Badge>
-                <CardTitle className="text-xl">Standard Package</CardTitle>
-                <CardDescription>Essential baseline health markers</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-foreground">$20</span>
-                  <span className="text-muted-foreground text-sm ml-1">/test</span>
-                </div>
-                <ul className="space-y-2.5 text-sm">
-                  {[
-                    'Full blood count',
-                    'Liver function test',
-                    'Kidney function test',
-                    'Fasting blood glucose with HbA1c',
-                    'Cholesterol (LDL, HDL, triglycerides)',
-                    'Urine test',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full rounded-xl">
-                  Book Standard Test
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Longevity Add-On */}
-            <Card className="relative overflow-hidden border-2 border-primary/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500" />
-              <CardHeader>
-                <Badge className="w-fit mb-2 bg-primary text-primary-foreground">Recommended</Badge>
-                <CardTitle className="text-xl">Longevity Add-On</CardTitle>
-                <CardDescription>Deep dive into longevity markers</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-primary">$49</span>
-                  <span className="text-muted-foreground text-sm ml-1">/test</span>
-                  <p className="text-xs text-muted-foreground mt-1">Group rate - Members only</p>
-                </div>
-                <ul className="space-y-2.5 text-sm">
-                  {[
-                    'Fasting insulin',
-                    'hs-CRP (inflammation)',
-                    'Ferritin',
-                    'Vitamin B12',
-                    'Vitamin D (25-OH)',
-                    'TSH (thyroid)',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-                  Book Longevity Panel
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* Combined Package */}
-            <Card className="relative overflow-hidden bg-gradient-to-br from-card to-secondary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <Badge variant="outline" className="w-fit mb-2 border-accent text-accent-foreground bg-accent/10">
-                  <Sparkles className="w-3 h-3 mr-1" />
-                  Best Value
-                </Badge>
-                <CardTitle className="text-xl">Complete Panel</CardTitle>
-                <CardDescription>Standard + Longevity combined</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-foreground">$69</span>
-                  <span className="text-muted-foreground text-sm ml-1">/test</span>
-                  <p className="text-xs text-muted-foreground mt-1">Save with bundle pricing</p>
-                </div>
-                <ul className="space-y-2.5 text-sm">
-                  {[
-                    'All Standard Package tests',
-                    'All Longevity Add-On tests',
-                    'Complete health overview',
-                    'Priority scheduling',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full rounded-xl border-2 hover:bg-accent/10">
-                  Book Complete Panel
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-
-          {/* Optional Add-Ons */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold text-center mb-8">Optional Add-On Tests</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                {
-                  icon: FlaskConical,
-                  title: 'Advanced Thyroid',
-                  description: 'Free T3 + Free T4',
-                  price: '$10',
-                },
-                {
-                  icon: Dna,
-                  title: 'Hormonal Panel',
-                  description: 'Testosterone/Estradiol + SHBG',
-                  price: '$45',
-                },
-                {
-                  icon: Heart,
-                  title: 'Cardiovascular',
-                  description: 'ApoB',
-                  price: '$17.50',
-                },
-                {
-                  icon: Dna,
-                  title: 'Genetic Risk',
-                  description: 'Lp(a) - One-time test',
-                  price: '$35',
-                },
-              ].map((addon, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="pt-6">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                      <addon.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h4 className="font-semibold mb-1">{addon.title}</h4>
-                    <p className="text-sm text-muted-foreground mb-3">{addon.description}</p>
-                    <span className="text-xl font-bold text-primary">{addon.price}</span>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          <BloodTestBuilder />
         </div>
       </section>
 
