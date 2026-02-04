@@ -32,6 +32,7 @@ const baseTest = {
   id: 'standard',
   name: 'Standard Panel',
   price: 19,
+  description: 'Essential baseline health markers for metabolic & organ function',
   tests: [
     { id: 'fbc', name: 'Full blood count' },
     { id: 'liver', name: 'Liver function' },
@@ -46,7 +47,7 @@ const addOns: AddOn[] = [
   {
     id: 'longevity',
     name: 'Longevity',
-    price: 50,
+    price: 48,
     icon: Sparkles,
     tests: [
       { id: 'insulin', name: 'Fasting insulin' },
@@ -130,20 +131,20 @@ export function BloodTestBuilder() {
           {/* Left - Base + Add-ons */}
           <div className="md:col-span-3 p-5 space-y-4">
             {/* Base Package - Inline */}
-            <div className="flex items-center justify-between p-3 rounded-xl bg-primary/5 border border-primary/20">
+            <div className="flex items-center justify-between p-4 rounded-xl bg-primary/5 border border-primary/20">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
                   <TestTube className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="font-semibold">{baseTest.name}</span>
+                    <span className="font-bold text-lg">{baseTest.name}</span>
                     <Badge variant="secondary" className="text-xs py-0">Base</Badge>
                   </div>
-                  <p className="text-xs text-muted-foreground">{baseTest.tests.length} tests included</p>
+                  <p className="text-xs text-muted-foreground">{baseTest.description}</p>
                 </div>
               </div>
-              <span className="text-xl font-bold text-primary">${baseTest.price}</span>
+              <span className="text-2xl font-bold text-primary">${baseTest.price}</span>
             </div>
 
             {/* Add-ons - Compact Grid */}
@@ -249,12 +250,11 @@ export function BloodTestBuilder() {
               </div>
 
               {/* CTA */}
-              <Button
-                size="lg"
-                className="w-full bg-white text-emerald-700 hover:bg-emerald-50 font-semibold shadow-lg"
-              >
-                Book Panel
-              </Button>
+              <div className="text-center">
+                <p className="text-white/90 text-sm">
+                  Contact us for booking
+                </p>
+              </div>
             </div>
           </div>
         </div>
