@@ -374,7 +374,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-foreground">$19.50</span>
+                  <span className="text-4xl font-bold text-foreground">$20</span>
                   <span className="text-muted-foreground text-sm ml-1">/test</span>
                 </div>
                 <ul className="space-y-2.5 text-sm">
@@ -410,7 +410,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-primary">$47.50</span>
+                  <span className="text-4xl font-bold text-primary">$49</span>
                   <span className="text-muted-foreground text-sm ml-1">/test</span>
                   <p className="text-xs text-muted-foreground mt-1">Group rate - Members only</p>
                 </div>
@@ -449,7 +449,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-foreground">$67</span>
+                  <span className="text-4xl font-bold text-foreground">$69</span>
                   <span className="text-muted-foreground text-sm ml-1">/test</span>
                   <p className="text-xs text-muted-foreground mt-1">Save with bundle pricing</p>
                 </div>
