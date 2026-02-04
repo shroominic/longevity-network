@@ -623,7 +623,7 @@ const Index = () => {
               <span className="font-serif font-bold text-xl">LongevityNetwork</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              A NetworkSchool Community Initiative
+              A NetworkSchool L2
             </p>
             <a 
               href="https://shakespeare.diy" 
