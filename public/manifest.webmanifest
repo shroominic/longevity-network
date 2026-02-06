@@ -1,0 +1,16 @@
+{
+  "name": "LongevityNetwork",
+  "short_name": "LongevityNetwork",
+  "description": "Join the LongevityNetwork community at NetworkSchool. Access CGM monitors, specialized meetups, blood testing discounts, and collective health optimization.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}
