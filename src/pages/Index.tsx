@@ -339,7 +339,7 @@ const Index = () => {
                   </a>
                 </Button>
                 <p className="text-sm text-muted-foreground text-center">
-                  Secure payment via Stripe
+                  Secure payment via Stripe • Crypto accepted (contact us in person)
                 </p>
               </CardFooter>
             </Card>
